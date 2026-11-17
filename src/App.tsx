@@ -26,7 +26,7 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='/licencias'>
           <Routes>
             {/* Rutas Publicas (Inaccesibles si ya existe sesion) */}
             <Route
