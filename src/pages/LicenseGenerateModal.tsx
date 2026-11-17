@@ -13,13 +13,13 @@ interface Props {
 }
 
 const FEATURE_OPTIONS = [
+    { id: 'installations', label: 'Gestión de Instalaciones' },
     { id: 'zones', label: 'Gestión de Zonas' },
-    { id: 'installations', label: 'Instalaciones / Accesos' },
-    { id: 'users', label: 'Gestión de Usuarios' },
-    { id: 'roles', label: 'Roles y Permisos' },
-    { id: 'reports', label: 'Reportes Avanzados' },
-    { id: 'cameras', label: 'Integración de Cámaras LPR' },
-    { id: 'barriers', label: 'Control de Barreras' },
+    { id: 'charge_per_minute', label: 'Cobro por Minuto' },
+    { id: 'subscribers', label: 'Abonados' },
+    { id: 'discounts', label: 'Descuentos' },
+    { id: 'cashbox', label: 'Cajas de Efectivo' },
+    { id: 'devices', label: 'Gestión de Dispositivos' },
 ];
 
 export const LicenseGenerateModal: React.FC<Props> = ({
@@ -33,7 +33,7 @@ export const LicenseGenerateModal: React.FC<Props> = ({
     const [clientId, setClientId] = useState('');
     const [hwid, setHwid] = useState('');
     const [planName, setPlanName] = useState('Plan Estándar 2026');
-    const [selectedFeatures, setSelectedFeatures] = useState<string[]>(['zones', 'installations']);
+    const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
     const [cashBoxes, setCashBoxes] = useState<CashBox[]>([
         { code: 'CASHBOX1', description: 'Caja Principal' },
     ]);
@@ -127,7 +127,7 @@ export const LicenseGenerateModal: React.FC<Props> = ({
         setClientId('');
         setHwid('');
         setPlanName('Plan Estándar 2026');
-        setSelectedFeatures(['zones', 'installations']);
+        setSelectedFeatures([]);
         setCashBoxes([{ code: 'CASHBOX1', description: 'Caja Principal' }]);
         setSuperAdminMail('');
         setSuperAdminPassword('');
@@ -290,7 +290,7 @@ export const LicenseGenerateModal: React.FC<Props> = ({
                         {/* Credenciales SuperAdmin Opcionales */}
                         <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-800/60">
                             <div>
-                                <label className="block text-xs font-semibold text-slate-400 mb-1">Email SuperAdmin Local (Opcional)</label>
+                                <label className="block text-xs font-semibold text-slate-400 mb-1">Email SuperAdmin Local</label>
                                 <input
                                     type="email"
                                     value={superAdminMail}
@@ -301,7 +301,7 @@ export const LicenseGenerateModal: React.FC<Props> = ({
                             </div>
 
                             <div>
-                                <label className="block text-xs font-semibold text-slate-400 mb-1">Password SuperAdmin Local (Opcional)</label>
+                                <label className="block text-xs font-semibold text-slate-400 mb-1">Password SuperAdmin Local</label>
                                 <input
                                     type="password"
                                     value={superAdminPassword}

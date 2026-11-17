@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSearchParams, useNavigate, Link } from 'react-router-dom';
-import { KeyRound, Lock, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Lock, CheckCircle2, AlertCircle } from 'lucide-react';
 import { api } from '@/api/axios';
 
 export const ResetPassword: React.FC = () => {
@@ -64,8 +64,8 @@ export const ResetPassword: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center bg-slate-950 p-4">
             <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
                 <div className="flex flex-col items-center mb-8">
-                    <div className="p-3 bg-sky-500/10 border border-sky-500/20 rounded-xl mb-3">
-                        <KeyRound className="w-8 h-8 text-sky-400" />
+                    <div className="p-1 bg-sky-500/10 border border-sky-500/20 rounded-xl mb-3">
+                        <img src="/logo.png" alt="Logo" className="w-16 h-16" />
                     </div>
                     <h1 className="text-2xl font-bold text-slate-100">Nueva Contraseña</h1>
                     <p className="text-slate-400 text-sm mt-1">Ingresa tu nueva contraseña de acceso</p>

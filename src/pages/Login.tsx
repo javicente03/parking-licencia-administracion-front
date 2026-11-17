@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { KeyRound, Lock, Mail, X, CheckCircle2, Eye } from 'lucide-react';
+import { Lock, Mail, X, CheckCircle2, Eye } from 'lucide-react';
 import { api } from '@/api/axios';
 import { useAuth } from '@/context/AuthContext';
 
@@ -58,8 +58,8 @@ export const Login: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center bg-slate-950 p-4">
             <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
                 <div className="flex flex-col items-center mb-8">
-                    <div className="p-3 bg-sky-500/10 border border-sky-500/20 rounded-xl mb-3">
-                        <KeyRound className="w-8 h-8 text-sky-400" />
+                    <div className="p-1 bg-sky-500/10 border border-sky-500/20 rounded-xl mb-3">
+                        <img src="/logo.png" alt="Logo" className="w-16 h-16" />
                     </div>
                     <h1 className="text-2xl font-bold text-slate-100">Gestor de Licencias</h1>
                     <p className="text-slate-400 text-sm mt-1">Ingresa con tus credenciales de Administrador</p>
@@ -82,7 +82,7 @@ export const Login: React.FC = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="w-full pl-10 pr-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 focus:outline-none focus:border-sky-500"
-                                placeholder="admin@ejesoft.cl"
+                                placeholder="admin@admin.com"
                             />
                         </div>
                     </div>
