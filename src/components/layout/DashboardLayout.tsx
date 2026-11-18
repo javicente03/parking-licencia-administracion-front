@@ -19,7 +19,7 @@ export const DashboardLayout: React.FC = () => {
                 <div className="h-16 flex items-center px-6 border-b border-slate-800 gap-3">
                     <ShieldCheck className="w-8 h-8 text-sky-400" />
                     <span className="font-bold text-lg tracking-wider bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
-                        PARKING AUTH
+                        Mach Parking
                     </span>
                 </div>
 

@@ -48,6 +48,8 @@ export interface GenerateLicensePayload {
     expiresAt: string;
     superAdminMail?: string;
     superAdminPassword?: string;
+    miniPcMail?: string;
+    miniPcPassword?: string;
 }
 
 export interface PaginationMeta {

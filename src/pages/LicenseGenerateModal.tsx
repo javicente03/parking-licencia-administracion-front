@@ -41,6 +41,9 @@ export const LicenseGenerateModal: React.FC<Props> = ({
     const [superAdminMail, setSuperAdminMail] = useState('');
     const [superAdminPassword, setSuperAdminPassword] = useState('');
 
+    const [miniPcMail, setMiniPcMail] = useState('');
+    const [miniPcPassword, setMiniPcPassword] = useState('');
+
     const [loading, setLoading] = useState(false);
     const [generatedToken, setGeneratedToken] = useState<string | null>(null);
 
@@ -93,6 +96,8 @@ export const LicenseGenerateModal: React.FC<Props> = ({
                     expiresAt,
                     superAdminMail,
                     superAdminPassword,
+                    miniPcMail,
+                    miniPcPassword,
                 },
                 {
                     headers: {
@@ -131,12 +136,14 @@ export const LicenseGenerateModal: React.FC<Props> = ({
         setCashBoxes([{ code: 'CASHBOX1', description: 'Caja Principal' }]);
         setSuperAdminMail('');
         setSuperAdminPassword('');
+        setMiniPcMail('');
+        setMiniPcPassword('');
         onClose();
     };
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
-            <div className="bg-slate-900 border border-slate-800 w-full max-w-2xl rounded-xl p-6 shadow-2xl my-8">
+            <div className="bg-slate-900 border border-slate-800 w-full max-w-2xl rounded-xl p-6 shadow-2xl my-8 overflow-y-auto max-h-[90vh]">
                 <div className="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
                     <h2 className="text-xl font-bold flex items-center gap-2 text-sky-400">
                         <Key className="w-5 h-5" /> Nueva Licencia On-Premise
@@ -306,6 +313,31 @@ export const LicenseGenerateModal: React.FC<Props> = ({
                                     type="password"
                                     value={superAdminPassword}
                                     onChange={(e) => setSuperAdminPassword(e.target.value)}
+                                    placeholder="••••••••"
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-100"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Credenciales MiniPC Opcionales */}
+                        <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-800/60">
+                            <div>
+                                <label className="block text-xs font-semibold text-slate-400 mb-1">Email MiniPC Local</label>
+                                <input
+                                    type="email"
+                                    value={miniPcMail}
+                                    onChange={(e) => setMiniPcMail(e.target.value)}
+                                    placeholder="mini@local.internal"
+                                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-100"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block text-xs font-semibold text-slate-400 mb-1">Password MiniPC Local</label>
+                                <input
+                                    type="password"
+                                    value={miniPcPassword}
+                                    onChange={(e) => setMiniPcPassword(e.target.value)}
                                     placeholder="••••••••"
                                     className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-100"
                                 />
