@@ -61,8 +61,8 @@ export const Login: React.FC = () => {
                     <div className="p-1 bg-sky-500/10 border border-sky-500/20 rounded-xl mb-3">
                         <img src="https://parking-system-m.s3.us-east-1.amazonaws.com/logo.png" alt="Logo" className="w-16 h-16" />
                     </div>
-                    <h1 className="text-2xl font-bold text-slate-100">Gestor de Licencias</h1>
-                    <p className="text-slate-400 text-sm mt-1">Ingresa con tus credenciales de Administrador</p>
+                    <h1 className="text-2xl font-bold text-slate-100">Mach Parking</h1>
+                    <p className="text-slate-400 text-sm mt-1">Gestor de Licencias</p>
                 </div>
 
                 {error && (
