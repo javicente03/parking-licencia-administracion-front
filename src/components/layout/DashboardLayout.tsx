@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Users, Key, LogOut, ShieldCheck } from 'lucide-react';
+import { Users, Key, LogOut } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 
 export const DashboardLayout: React.FC = () => {
@@ -17,7 +17,7 @@ export const DashboardLayout: React.FC = () => {
             {/* Sidebar */}
             <aside className="w-64 border-r border-slate-800 bg-slate-900/50 flex flex-col">
                 <div className="h-16 flex items-center px-6 border-b border-slate-800 gap-3">
-                    <ShieldCheck className="w-8 h-8 text-sky-400" />
+                    <img src="https://parking-system-m.s3.us-east-1.amazonaws.com/logo.png" alt="Logo" className="w-10 h-10" />
                     <span className="font-bold text-lg tracking-wider bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
                         Mach Parking
                     </span>

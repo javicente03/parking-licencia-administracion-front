@@ -5,6 +5,7 @@ import { api } from '@/api/axios';
 import { License, PaginatedResponse } from '@/types';
 import { Paginator } from '@/components/ui/Paginator';
 import { LicenseGenerateModal } from '@/pages/LicenseGenerateModal';
+import { formatDate } from '@/helpers/date';
 
 export const Licenses: React.FC = () => {
     const queryClient = useQueryClient();
@@ -121,7 +122,7 @@ export const Licenses: React.FC = () => {
                                         <div className="text-slate-500">{lic.cashBoxesCount} caja(s)</div>
                                     </td>
                                     <td className="py-3.5 px-4 text-xs text-slate-400">
-                                        {new Date(lic.expiresAt).toLocaleDateString()}
+                                        {formatDate(lic.expiresAt, 'DD/MM/YYYY')}
                                     </td>
                                     <td className="py-3.5 px-4">
                                         {lic.status === 'ACTIVE' ? (
