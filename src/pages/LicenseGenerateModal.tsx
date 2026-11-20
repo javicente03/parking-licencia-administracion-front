@@ -19,7 +19,7 @@ const FEATURE_OPTIONS = [
     { id: 'subscribers', label: 'Abonados' },
     { id: 'discounts', label: 'Descuentos' },
     { id: 'cashbox', label: 'Cajas de Efectivo' },
-    { id: 'devices', label: 'Gestión de Dispositivos' },
+    { id: 'devices', label: 'Gestión de Servidores' },
 ];
 
 export const LicenseGenerateModal: React.FC<Props> = ({
